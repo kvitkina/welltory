@@ -1,0 +1,14 @@
+.page {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 320px;
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #151A22;
+  }
+
+.page__overlay {
+    background-image: url('./images/BG.png');
+}
