@@ -2,8 +2,19 @@
     display: grid;
     grid-template-columns: 1fr 123px 123px;
     gap: 20px;
+    align-content: center;
+    justify-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: 17px;
+    margin-bottom: 16px;
+    &:first-child {
+        text-align: start;
+    }
+    &:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
 }
 
 .comparison__text {
@@ -13,4 +24,5 @@
     line-height: 20px;
     letter-spacing: 0.01em;
     color: #FFF;
+    margin: 0;
 }

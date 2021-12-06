@@ -29,6 +29,16 @@
     align-items: center;
 }
 
+.card__bookmark {
+    position: absolute;
+    border: 3px solid transparent;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+    top: 0;
+    left: -6px;
+    opacity: 0.4;
+}
+
 .card__name {
     font-family: 'Montserrat';
     font-weight: normal;

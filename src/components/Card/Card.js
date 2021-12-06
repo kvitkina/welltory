@@ -16,7 +16,10 @@ export const Card = ({ name, discount, price, oldPrice, details, color, textColo
             <p className={classes.card__discountText} style={{color: `${textColor}`}}>
             {discount}
             </p>
-            <div className={classes.card__bookmark} />
+            <div
+                className={classes.card__bookmark}
+                style={{borderBottomColor: `${color}`, borderRightColor: `${color}`}}
+            />
         </div>
         <div className={classes.card__info}>
             <div className={classes.card__description}>

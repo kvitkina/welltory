@@ -1,6 +1,8 @@
 import React from 'react';
 import cn from 'classnames';
 import classes from './Description.module.scss';
+import { feelBetterComparison, insightsComparison } from '../../utils/config';
+import { Comparison } from '../Comparison/Comparison';
 
 export const Description = () => {
     return (
@@ -24,14 +26,30 @@ export const Description = () => {
             )}>
                 Feel better fast
             </h3>
-            
+            <div className={classes.description__wrapper}>
+                {feelBetterComparison.map(({id, text, free, pro}) => {
+                    return <Comparison
+                        key={id}
+                        text={text}
+                        free={free}
+                        pro={pro}
+                    />
+                })}
+            </div>
             <h3 className={cn(
                 classes.description__title,
                 classes.description__title_gradient
             )}>
                 Gain rich health insights
             </h3>
-            
+            {insightsComparison.map(({id, text, free, pro}) => {
+                return <Comparison
+                    key={id}
+                    text={text}
+                    free={free}
+                    pro={pro}
+                />
+            })}
         </section>
     )
 };
