@@ -7,8 +7,19 @@
     width: 100%;
     margin: 0 auto;
     background-color: #151A22;
+    padding: 0 303px 59px;
+    &::before {
+      content: '';
+      top: 0;
+      left: 0;
+      background-image: url('./images/BG.png');
+      width: 100%;
+      z-index: 2;
+    }
   }
 
-.page__overlay {
-    background-image: url('./images/BG.png');
+@media screen and (max-width: 870px) {
+  .page {
+    padding: 0 16px 130px;
+    }
 }

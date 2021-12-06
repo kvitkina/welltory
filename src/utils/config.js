@@ -1,3 +1,10 @@
+import { FacebookIcon } from "../components/icons/FacebookIcon";
+import { TwitterIcon } from "../components/icons/TwitterIcon";
+import { InstagramIcon } from "../components/icons/InstagramIcon";
+import { LinkedinIcon } from "../components/icons/LinkedinIcon";
+import { AppStoreIcon } from "../components/icons/AppStoreIcon";
+import { GoogleIcon } from "../components/icons/GoogleIcon";
+
 export const cardsInfo = [
     {
         id: '1',
@@ -93,3 +100,38 @@ export const insightsComparison = [
     }
 ];
 
+export const socialIcons = [
+    {
+      Icon: TwitterIcon,
+      link: 'https://twitter.com/welltory',
+      id: '0',
+    },
+    {
+      Icon: FacebookIcon,
+      link: 'https://www.facebook.com/welltory',
+      id: '1',
+    },
+    {
+        Icon: InstagramIcon,
+        link: 'https://www.instagram.com/welltory/',
+        id: '2',
+      },
+      {
+        Icon: LinkedinIcon,
+        link: 'https://www.linkedin.com/company/welltory',
+        id: '3',
+      },
+];
+
+export const appIcons = [
+    {
+      Icon: AppStoreIcon,
+      link: 'https://itunes.apple.com/app/welltory-personal-nyj-analitik/id1074367771?mt=8',
+      id: '0',
+    },
+    {
+      Icon: GoogleIcon,
+      link: 'https://play.google.com/store/apps/details?id=com.welltory.client.android',
+      id: '1',
+    },
+];

@@ -58,3 +58,18 @@
     }
 }
 
+@media screen and (max-width: 700px) {
+    .description {
+        padding: 0 16px;
+    }
+    .description__subtitle {
+        min-width: 56px;
+        max-width: 56px;
+    
+    }
+    .description__container {
+        grid-template-columns: 1fr 56px 56px;
+        gap: 16px;
+    }
+}
+

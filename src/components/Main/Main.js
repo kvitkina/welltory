@@ -4,19 +4,23 @@ import { Button } from '../Button/Button';
 import { Description } from '../Description/Description';
 import { cardsInfo } from '../../utils/config';
 import { Card } from '../Card/Card';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 export const Main = () => {
 
   return (
     <section className={classes.main}>
-       <h1 className={classes.main__title}>
-          Take better care of yourself every day
-        </h1>
+      <Link  to='/' className={classes.main__logo} />
+      <h1 className={classes.main__title}>
+        Take better care of yourself every day
+      </h1>
       <div className={classes.main__cards}>
         {cardsInfo.map(({id, name, discount, price, oldPrice, details, color, textColor}) => {
           return (
-            <NavLink to={`/${name.toLowerCase()}`}>
+            <NavLink
+              style={{ textDecoration: 'none' }} to={`/${name.toLowerCase()}`}
+              className={classes.main__link}
+            >
               <Card
                 key={id}
                 name={name}
