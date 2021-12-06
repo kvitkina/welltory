@@ -4,7 +4,10 @@ import { Button } from '../Button/Button';
 import { Description } from '../Description/Description';
 import { cardsInfo } from '../../utils/config';
 import { Card } from '../Card/Card';
+import { NavLink } from 'react-router-dom';
+
 export const Main = () => {
+
   return (
     <section className={classes.main}>
        <h1 className={classes.main__title}>
@@ -12,16 +15,20 @@ export const Main = () => {
         </h1>
       <div className={classes.main__cards}>
         {cardsInfo.map(({id, name, discount, price, oldPrice, details, color, textColor}) => {
-          return <Card
-            key={id}
-            name={name}
-            discount={discount}
-            price={price}
-            oldPrice={oldPrice}
-            details={details}
-            color={color}
-            textColor={textColor}
-          />
+          return (
+            <NavLink to={`/${name.toLowerCase()}`}>
+              <Card
+                key={id}
+                name={name}
+                discount={discount}
+                price={price}
+                oldPrice={oldPrice}
+                details={details}
+                color={color}
+                textColor={textColor}
+              />
+            </NavLink>
+          ) 
         })}
       </div>
       <div className={classes.main__button}>

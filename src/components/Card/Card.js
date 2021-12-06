@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import cn from 'classnames';
+import { useLocation } from 'react-router-dom';
+
 import classes from './Card.module.scss';
 
 export const Card = ({ name, discount, price, oldPrice, details, color, textColor }) => {
-  const [isActive, setIsActive] = useState(false);
-
-  const handleClick = () => {
-    setIsActive(true)
-  };
+    const location = useLocation();
+    const path = location.pathname;
   return (
     <div className={cn(classes.card, {
-        [[classes.card_active]]: isActive
-    })} onClick={handleClick}>
+        [[classes.card_active]]: path.slice(1) === name.toLowerCase()
+    })}>
         <div className={classes.card__discount} style={{backgroundColor: `${color}`}}>
             <p className={classes.card__discountText} style={{color: `${textColor}`}}>
             {discount}
@@ -25,7 +24,7 @@ export const Card = ({ name, discount, price, oldPrice, details, color, textColo
             <div className={classes.card__description}>
                 <h3 className={classes.card__name}>{name}</h3>
                 <p className={cn(classes.card__details, {
-                    [[classes.card__details_active]]: isActive
+                    [[classes.card__details_active]]: path.slice(1) === name.toLowerCase()
                 })}>
                     {details}
                 </p>

@@ -1,17 +1,22 @@
 .card {
     position: relative;
     box-sizing: border-box;
-    min-width: 337px;
+    width: 337px;
+    max-height: 190px;
     padding: 63px 33px 26px;
     background: rgba(51, 59, 74, 0.2);
     border-radius: 4px;
-    margin-right: 19px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    &:last-child {
-        margin-right: 0;
-    }
+}
+
+.card_active {
+    border: 0.8px solid;
+    border-image-slice: 1;
+    border-width: 0.8px;
+    border-radius: 4px;
+    border-image-source: linear-gradient(91.33deg, #89A3FF 0%, #FF6060 54.17%, #FFBF00 100%);
 }
 
 .card__discount {
@@ -50,6 +55,7 @@
     color: #FFF;
     margin-bottom: 68px;
     margin-top: 0;
+    text-decoration: none;
 }
 
 .card__discountText {
@@ -99,4 +105,8 @@
     color: #FFF;
     opacity: 0.5;
     margin: 0;
+}
+
+.card__details_active {
+    opacity: 1;
 }
